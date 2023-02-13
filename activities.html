@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>John Marshall Class of 2008</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand"><img width="30px" src="jmlogo.svg"></a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                        <a class="nav-link" href="index.html#about">About</a>
+                        <a class="nav-link" href="index.html#faq">FAQ</a>
+                        <a class="nav-link" href="activities.html">Activities</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                    Get tickets
+                </button>
+            </div>
+        </nav>
+        <div id="hero">
+            <img alt="John Marshall Class of 2008 Reunion Logo"
+                srcset="../JM_Reunion_logo_200.png 200w, ../JM_Reunion_logo_360.png 360w, ../JM_Reunion_logo_500.png 500w,"
+                sizes="(max-width: 710px) 200px, (max-width: 991px) 360px, 500px">
+        </div>
+        <!-- Quote Activity starts here -->
+        <div class="card text-center">
+            <div class="card-header">
+                Who dat senior quote?
+            </div>
+            <div class="card-body">
+                <h5 id="quote-header" class="card-title">Can you guess who wrote that senior quote?</h5>
+                <p class="card-text" id="quote-text">Try to guess who wrote each senior quote! We'll give you the quote and you tell us who wrote it.</p>
+                <div class="d-grid gap-2" id="buttons">
+                    <button id="start-quote" class="btn btn-primary">Start</button>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                Score: <span id="guess-score">0</span>
+            </div>
+        </div>
+
+    </main>
+    <section class="fixed-bottom" id="tickets">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ticketModal">
+            Get tickets
+        </button>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ticketModalLabel">Get tickets</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tickets for this event are $15 per attendee and that covers the cost of the venue, administration
+                        fees (the credit card
+                        processing), activities, and light appetizers.</p>
+                    <p> Any proceeds (tickets sales above operating costs) will be donated to charity. In order to
+                        simplify administrative overhead, there will be no refunds for this event.</p>
+                    <form action="https://buy.stripe.com/dR65nm1Mlco09Vu289">
+                        <button type="submit" class="btn btn-primary">Individual ticket $15</button>
+                    </form>
+                    <form action="https://buy.stripe.com/fZe6rqfDb87K6Ji28a">
+                        <button type="submit" class="btn btn-primary">Individual Plus One ticket $30</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/028d9d6f63.js" crossorigin="anonymous"></script>
+    <script src="activities.js"></script>
+</body>
+
+</html>
